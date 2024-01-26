@@ -8,5 +8,6 @@
     "start": "index.js"
   },
   "author": "",
+  "type": "module",
   "license": "ISC"
 }
