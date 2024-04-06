@@ -1,13 +1,21 @@
 {
-  "name": "dsa",
-  "version": "1.0.0",
-  "description": "Data structures and algorithms",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
-  },
-  "author": "",
+  "name": "dsa-js",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "license": "ISC"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "volta": {
+    "node": "20.12.1"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=8.1.0"
+  }
 }
