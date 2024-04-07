@@ -1,8 +1,14 @@
-let arr = [7, 5, 4, 3, 2];
+/**
+ * 
+ 
+Select maximum value from the array and swap the position
+After each step right portion is already sorted, first step is completed then last position has sorted value.
+You don’t need to check for the last position once you have completed length - 1  steps.
+In general, swap 0 node with go till [0..n-1]
+swap 1 node with go till [1.. n-1]
+Time complexity in best, worst, and average: O(N * 2)
 
-selectionSort(arr);
-
-console.log(arr.toString());
+ */
 
 function selectionSort(arr) {
   //Find max number from unsorted array
@@ -29,3 +35,9 @@ function getMaxIndex(array, start, end) {
 
   return max;
 }
+
+let arr = [7, 5, 4, 3, 2];
+
+selectionSort(arr);
+
+console.log(arr.toString());

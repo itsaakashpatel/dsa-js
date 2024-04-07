@@ -1,7 +1,3 @@
-let arr = [3, 5, 2, 1, 4];
-
-console.log(cyclicSort(arr));
-
 function cyclicSort(array) {
   let i = 0;
   while (i < array.length) {
@@ -17,3 +13,7 @@ function cyclicSort(array) {
 function swap(array, first, second) {
   [array[first], array[second]] = [array[second], array[first]];
 }
+
+let arr = [3, 5, 2, 1, 4];
+
+console.log(cyclicSort(arr));
