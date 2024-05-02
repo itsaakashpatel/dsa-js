@@ -28,7 +28,7 @@ list.append(1);
 list.append(2);
 list.append(3);
 list.append(4);
-list.append(5);
+// list.append(5);
 console.log("BEFORE ", list.toString());
 // console.log(list.middleNode());
 // const newList = reverseBetween(list.getHead(), 1, 2);

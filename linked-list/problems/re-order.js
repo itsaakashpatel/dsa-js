@@ -15,8 +15,6 @@
 var reorderList = function (head) {
   if (!head) return null;
 
-  //move all items to list array
-
   let list = [];
   let temp = head;
 
@@ -27,15 +25,18 @@ var reorderList = function (head) {
 
   let n = list.length;
   let current = head;
+  let left = 1;
+  let right = n - 1;
 
-  for (let i = 0; i < n / 2; i++) {
-    const pt = i % 2 === 0 ? list[i] : list[n - i - 1];
-    current.next = pt;
-    current = pt;
+  while (left <= right) {
+    current.next = list[right];
+    current = current.next;
+    right--;
+    current.next = list[left];
+    current = current.next;
+    left++;
   }
-  console.log("temp", JSON.stringify(head, null, 2));
-  //   process.exit(0);
-
+  current.next = null;
   return head;
 };
 
