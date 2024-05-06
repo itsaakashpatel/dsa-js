@@ -1,4 +1,4 @@
-const BinaryTree = function () {
+const AvlTree = function () {
   let Node = function (value) {
     this.value = value;
     this.left = null;
@@ -12,22 +12,22 @@ const BinaryTree = function () {
     return root;
   };
 
-  function getHeight(node) {
+  this.getHeight = function (node) {
     if (node == null) return -1;
     return node.height;
-  }
+  };
 
   this.isBalancedTree = function (tree) {
     if (tree === null) return true;
 
     return (
-      Math.abs(getHeight(tree.left) - getHeight(tree.right)) <= 1 &&
+      Math.abs(this.getHeight(tree.left) - this.getHeight(tree.right)) <= 1 &&
       this.isBalancedTree(tree.left) &&
       this.isBalancedTree(tree.right)
     );
   };
 
-  let insertNode = function (node, newNode) {
+  this.insertNode = function (node, newNode) {
     //1. If new node value is less than node then go to left
     //2. If new node value is more than node then go to right
 
@@ -36,18 +36,99 @@ const BinaryTree = function () {
       if (node.left === null) {
         node.left = newNode;
       } else {
-        insertNode(node.left, newNode);
+        this.insertNode(node.left, newNode);
       }
     } else {
       //Check if right of node is empty then insert it
       if (node.right === null) {
         node.right = newNode;
       } else {
-        insertNode(node.right, newNode);
+        this.insertNode(node.right, newNode);
       }
     }
-    node.height = Math.max(getHeight(node.left), getHeight(node.right)) + 1;
+
+    node.height =
+      Math.max(this.getHeight(node.left), this.getHeight(node.right)) + 1;
+
+    //rotate the tree to balance the tree from the unbalanced tree starting from the node before return to previous node
+    return this.rotate(node);
+  };
+
+  this.rotate = function (node) {
+    //First determine whether the tree is left heavy or right heavy based on that we will have left-right cases.
+    //If height of left tree is more than 1 than height of the right tree of the node then it's left heavy case
+    if (this.getHeight(node.left) - this.getHeight(node.right) > 1) {
+      if (
+        this.getHeight(node.left.left) - this.getHeight(node.left.right) >
+        0
+      ) {
+        //Left-left case -> Right rotate on the node
+        return this.rightRotate(node);
+      }
+
+      if (
+        this.getHeight(node.left.left) - this.getHeight(node.left.right) <
+        0
+      ) {
+        //Left-right case -> Right rotate on the node
+        node.left = this.leftRotate(node.left);
+        return this.rightRotate(node);
+      }
+    }
+
+    //Right heavy
+    if (this.getHeight(node.left) - this.getHeight(node.right) < -1) {
+      if (
+        this.getHeight(node.right.left) - this.getHeight(node.right.right) <
+        0
+      ) {
+        //Right-right case -> Left rotate
+        return this.leftRotate(node);
+      }
+
+      if (
+        this.getHeight(node.right.left) - this.getHeight(node.right.right) >
+        0
+      ) {
+        //Right-left case -> Left rotate
+        node.right = this.rightRotate(node.right);
+        return this.leftRotate(node);
+      }
+    }
+
     return node;
+  };
+
+  this.rightRotate = function (node) {
+    const c = node.left;
+    const t = c.right;
+
+    c.right = node;
+    node.left = t;
+
+    node.height = Math.max(
+      this.getHeight(node.left),
+      this.getHeight(node.right) + 1
+    );
+    c.height = Math.max(this.getHeight(c.left), this.getHeight(c.right) + 1);
+
+    return c;
+  };
+
+  this.leftRotate = function (node) {
+    const p = node.right;
+    const t = p.left;
+
+    p.left = node;
+    node.right = t;
+
+    node.height = Math.max(
+      this.getHeight(node.left),
+      this.getHeight(node.right) + 1
+    );
+    p.height = Math.max(this.getHeight(p.left), this.getHeight(p.right) + 1);
+
+    return p;
   };
 
   this.insert = function (value) {
@@ -58,7 +139,7 @@ const BinaryTree = function () {
       root = node;
       return node;
     } else {
-      return insertNode(root, node);
+      return this.insertNode(root, node);
     }
   };
 
@@ -205,4 +286,4 @@ const BinaryTree = function () {
   };
 };
 
-export default BinaryTree;
+export default AvlTree;
