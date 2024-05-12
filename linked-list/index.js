@@ -5,6 +5,7 @@ import reverseList from "./problems/reversal-list.js";
 import reverseBetween from "./problems/reverse-list-between.js";
 import isPalindrome from "./problems/palindrome.js";
 import reorderList from "./problems/re-order.js";
+// import swapPairs from "./problems/swap-nodes-in-pairs.js";
 
 const list = LinkedList();
 const doublyList = DoublyLinkedList();
@@ -23,19 +24,20 @@ const circular = new CircularLinkedList();
 // list.remove(20);
 // list.insertRec(55, 3);
 // list.sort();
-// const listt = reverseList(list.getHead());
 list.append(1);
 list.append(2);
 list.append(3);
 list.append(4);
-// list.append(5);
+list.append(5);
 console.log("BEFORE ", list.toString());
+const listt = reverseList(list.getHead());
 // console.log(list.middleNode());
 // const newList = reverseBetween(list.getHead(), 1, 2);
 
 // const isPalindromeCheck = isPalindrome(list.getHead());
-const reorder = reorderList(list.getHead());
-console.log("AFTER ", list.toString(reorder));
+// const reorder = reorderList(list.getHead());
+// const swap = swapPairs(list.getHead());
+console.log("AFTER ", list.toString(listt));
 // console.log(list.sort());
 // console.log(list.size());
 
