@@ -23,7 +23,6 @@ function modifiedBinarySearch(nums, target) {
 
   while (left < right) {
     let mid = left + Math.floor((right - left) / 2);
-    console.log("🚀 ~ modifiedBinarySearch ~ mid:", mid);
 
     if (condition(mid)) {
       right = mid;

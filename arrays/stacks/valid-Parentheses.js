@@ -1,19 +1,18 @@
 /**
  * @param {string} s
  * @return {boolean}
- * 
- * https://leetcode.com/problems/valid-parentheses/\
- * 
+ *
+ * https://leetcode.com/problems/valid-parentheses/
+ *
  * Example 1:
-
 Input: s = "()"
 Output: true
-Example 2:
 
+Example 2:
 Input: s = "()[]{}"
 Output: true
-Example 3:
 
+Example 3:
 Input: s = "(]"
 Output: false
  */
@@ -44,4 +43,4 @@ var isValid = function (s) {
   return true;
 };
 
-console.log(isValid("(]"));
+console.log(isValid("()"));

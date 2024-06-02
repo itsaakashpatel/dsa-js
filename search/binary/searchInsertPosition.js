@@ -47,5 +47,5 @@ function searchInsertPosition(nums, target) {
   return correctIndex;
 }
 
-let searchIndex = searchInsertPosition([1, 3, 5, 6], 7);
+let searchIndex = searchInsertPosition([1, 3, 5, 6], 2);
 console.log(searchIndex);
