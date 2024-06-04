@@ -20,14 +20,16 @@ var isValid = function (s) {
   let stack = [];
 
   for (let i = 0; i < s.length; i++) {
+    //If we find an opening bracket, push to stack.
     if (s[i] === "(" || s[i] === "{" || s[i] === "[") {
       stack.push(s[i]);
     } else {
-      let top = stack[stack.length - 1];
+      let last = stack[stack.length - 1];
+      
       if (
-        (s[i] === ")" && top === "(") ||
-        (s[i] === "}" && top === "{") ||
-        (s[i] === "]" && top === "[")
+        (s[i] === ")" && last === "(") ||
+        (s[i] === "}" && last === "{") ||
+        (s[i] === "]" && last === "[")
       ) {
         stack.pop();
       } else {
