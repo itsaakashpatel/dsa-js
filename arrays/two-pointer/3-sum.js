@@ -70,6 +70,8 @@ var threeSum = function (nums) {
         final.push([nums[i], nums[j], nums[k]]);
         j++;
         k--;
+
+       // What if j is the same as the previous value, then we will have duplicate elements, hence we need to skip j until we find a new number.
         while (nums[j] === nums[j - 1] && j < k) {
           j++;
         }
