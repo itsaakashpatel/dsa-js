@@ -25,4 +25,4 @@ function permutations(pStr, uStr) {
   }
 }
 
-console.log(permutations("", "abc"));
+console.log(permutations('', 'abc'));

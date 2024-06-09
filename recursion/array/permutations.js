@@ -14,7 +14,7 @@ var permute = function (nums) {
     for (let i = 0; i < unprocessedNums.length; i++) {
       recur(
         [unprocessedNums[i], ...processedNums],
-        [...unprocessedNums.slice(0, i), ...unprocessedNums.slice(i + 1)]
+        [...unprocessedNums.slice(0, i), ...unprocessedNums.slice(i + 1)],
       );
     }
   }

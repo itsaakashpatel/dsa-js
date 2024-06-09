@@ -143,16 +143,16 @@ function CircularLinkedList() {
   //Print item of the string
   this.toString = function () {
     let current = head,
-      string = "";
+      string = '';
     const temp = head.element;
 
     while (current) {
       if (temp === current.next.element) {
-        string += current.element + (current.next ? "\n" : "");
+        string += current.element + (current.next ? '\n' : '');
         break;
       }
 
-      string += current.element + (current.next ? "\n" : "");
+      string += current.element + (current.next ? '\n' : '');
       current = current.next;
     }
 

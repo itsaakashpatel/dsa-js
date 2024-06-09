@@ -12,19 +12,19 @@ function reverseNum(n) {
 }
 
 function reverseString(n) {
-  return n.split("").reverse().join("");
+  return n.split('').reverse().join('');
 }
 
 function reverseNumber(n) {
-  if (n === 0) return "";
+  if (n === 0) return '';
 
   let reminder = n % 10;
 
-  return reminder + "" + reverseNumber(Math.floor(n / 10));
+  return reminder + '' + reverseNumber(Math.floor(n / 10));
 }
 
 reverseNum(2431);
 
 console.log(sum);
-console.log(reverseString("Aakash"));
+console.log(reverseString('Aakash'));
 console.log(reverseNumber(2431));

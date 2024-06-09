@@ -57,4 +57,4 @@ function ceil(nums, target) {
 let getFloor = floor([3, 4, 4, 7, 8, 10], 5);
 let getCeil = ceil([3, 4, 4, 7, 8, 10], 5);
 
-console.log({ getFloor, getCeil });
+console.log({getFloor, getCeil});

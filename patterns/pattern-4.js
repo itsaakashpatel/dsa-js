@@ -6,16 +6,16 @@
  *      1 2 3 4
  */
 
-let string = "";
+let string = '';
 const rows = 4;
 
 function pattern4(length) {
   for (let row = 0; row <= length; row++) {
     for (let col = 0; col < row; col++) {
-      string += col + 1 + " ";
+      string += col + 1 + ' ';
     }
 
-    string += "\n";
+    string += '\n';
   }
 
   console.log(string);

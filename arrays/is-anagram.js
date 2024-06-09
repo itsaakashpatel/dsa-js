@@ -42,4 +42,4 @@ var isAnagram = function (s, t) {
   return true;
 };
 
-console.log(isAnagram("rat", "car"));
+console.log(isAnagram('rat', 'car'));

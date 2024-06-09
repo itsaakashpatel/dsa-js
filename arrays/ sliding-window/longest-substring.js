@@ -89,4 +89,4 @@ var lengthOfLongestSubstring = function (str) {
   return maxLength;
 };
 
-console.log(lengthOfLongestSubstring("pwwkew"));
+console.log(lengthOfLongestSubstring('pwwkew'));

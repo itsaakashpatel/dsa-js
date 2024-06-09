@@ -40,7 +40,7 @@ var groupAnagrams = function (strs) {
 
   for (let i = 0; i < strs.length; i++) {
     const str = strs[i];
-    const sortString = str.split("").sort().join("");
+    const sortString = str.split('').sort().join('');
     const checkString = stringHash.has(sortString);
 
     if (checkString) {
@@ -54,6 +54,6 @@ var groupAnagrams = function (strs) {
   return final;
 };
 
-const strings = ["eat", "tea", "tan", "ate", "nat", "bat"];
+const strings = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 
 console.log(groupAnagrams(strings));

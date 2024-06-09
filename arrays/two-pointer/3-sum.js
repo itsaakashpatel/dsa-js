@@ -8,8 +8,6 @@
 
 Notice that the solution set must not contain duplicate triplets.
 
- 
-
 Example 1:
 
 Input: nums = [-1,0,1,2,-1,-4]
@@ -71,7 +69,7 @@ var threeSum = function (nums) {
         j++;
         k--;
 
-       // What if j is the same as the previous value, then we will have duplicate elements, hence we need to skip j until we find a new number.
+        // What if j is the same as the previous value, then we will have duplicate elements, hence we need to skip j until we find a new number.
         while (nums[j] === nums[j - 1] && j < k) {
           j++;
         }

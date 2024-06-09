@@ -12,4 +12,4 @@ function subsequence(processedStr, unProcessedString) {
   subsequence(processedStr, unProcessedString.substring(1));
 }
 
-console.log(subsequence("", "abc"));
+console.log(subsequence('', 'abc'));

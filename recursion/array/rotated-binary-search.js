@@ -3,13 +3,12 @@ function rotatedSearch(array, target, start, end) {
 
   let middle = start + Math.floor((end - start) / 2);
 
-  console.log("middle", middle);
+  console.log('middle', middle);
 
   //If middle element is the target element
   if (array[middle] === target) return middle;
   if (array[start] <= array[middle]) {
-    if (target < array[middle])
-      return rotatedSearch(array, target, start, middle - 1);
+    if (target < array[middle]) return rotatedSearch(array, target, start, middle - 1);
     else return rotatedSearch(array, target, middle + 1, end);
   }
 

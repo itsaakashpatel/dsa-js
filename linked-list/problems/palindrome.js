@@ -28,8 +28,8 @@ var isPalindrome = function (head) {
 
 //Using Strings
 var isPalindrome = function (head) {
-  let string1 = "",
-    string2 = "";
+  let string1 = '',
+    string2 = '';
   let node = head;
 
   while (node != null) {

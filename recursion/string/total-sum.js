@@ -1,7 +1,7 @@
 function totalSum(target, partition) {
   const output = [];
 
-  combinations("", target);
+  combinations('', target);
 
   function combinations(str, target) {
     if (target === 0) {

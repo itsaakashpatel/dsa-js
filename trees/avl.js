@@ -47,8 +47,7 @@ const AvlTree = function () {
       }
     }
 
-    node.height =
-      Math.max(this.getHeight(node.left), this.getHeight(node.right)) + 1;
+    node.height = Math.max(this.getHeight(node.left), this.getHeight(node.right)) + 1;
 
     //rotate the tree to balance the tree from the unbalanced tree starting from the node before return to previous node
     return this.rotate(node);
@@ -58,18 +57,12 @@ const AvlTree = function () {
     //First determine whether the tree is left heavy or right heavy based on that we will have left-right cases.
     //If height of left tree is more than 1 than height of the right tree of the node then it's left heavy case
     if (this.getHeight(node.left) - this.getHeight(node.right) > 1) {
-      if (
-        this.getHeight(node.left.left) - this.getHeight(node.left.right) >
-        0
-      ) {
+      if (this.getHeight(node.left.left) - this.getHeight(node.left.right) > 0) {
         //Left-left case -> Right rotate on the node
         return this.rightRotate(node);
       }
 
-      if (
-        this.getHeight(node.left.left) - this.getHeight(node.left.right) <
-        0
-      ) {
+      if (this.getHeight(node.left.left) - this.getHeight(node.left.right) < 0) {
         //Left-right case -> Right rotate on the node
         node.left = this.leftRotate(node.left);
         return this.rightRotate(node);
@@ -78,18 +71,12 @@ const AvlTree = function () {
 
     //Right heavy
     if (this.getHeight(node.left) - this.getHeight(node.right) < -1) {
-      if (
-        this.getHeight(node.right.left) - this.getHeight(node.right.right) <
-        0
-      ) {
+      if (this.getHeight(node.right.left) - this.getHeight(node.right.right) < 0) {
         //Right-right case -> Left rotate
         return this.leftRotate(node);
       }
 
-      if (
-        this.getHeight(node.right.left) - this.getHeight(node.right.right) >
-        0
-      ) {
+      if (this.getHeight(node.right.left) - this.getHeight(node.right.right) > 0) {
         //Right-left case -> Left rotate
         node.right = this.rightRotate(node.right);
         return this.leftRotate(node);
@@ -106,10 +93,7 @@ const AvlTree = function () {
     c.right = node;
     node.left = t;
 
-    node.height = Math.max(
-      this.getHeight(node.left),
-      this.getHeight(node.right) + 1
-    );
+    node.height = Math.max(this.getHeight(node.left), this.getHeight(node.right) + 1);
     c.height = Math.max(this.getHeight(c.left), this.getHeight(c.right) + 1);
 
     return c;
@@ -122,10 +106,7 @@ const AvlTree = function () {
     p.left = node;
     node.right = t;
 
-    node.height = Math.max(
-      this.getHeight(node.left),
-      this.getHeight(node.right) + 1
-    );
+    node.height = Math.max(this.getHeight(node.left), this.getHeight(node.right) + 1);
     p.height = Math.max(this.getHeight(p.left), this.getHeight(p.right) + 1);
 
     return p;
@@ -150,7 +131,7 @@ const AvlTree = function () {
     }
 
     if (node.value === value) {
-      console.log("Node found at ", node);
+      console.log('Node found at ', node);
       return node;
     }
 
@@ -170,7 +151,7 @@ const AvlTree = function () {
         node = node.left;
       }
 
-      console.log("Minimum", node.value);
+      console.log('Minimum', node.value);
       return node.value;
     }
     return null;
@@ -184,7 +165,7 @@ const AvlTree = function () {
         node = node.right;
       }
 
-      console.log("Maximum", node.value);
+      console.log('Maximum', node.value);
       return node.value;
     }
     return null;

@@ -42,7 +42,7 @@ var checkInclusion = function (s1, s2) {
     if (!charMap.has(s2[right])) {
       left++;
     } else {
-      console.log("left and right", { left, right, charMap });
+      console.log('left and right', {left, right, charMap});
       charMap.set(s2[right], charMap.get(s2[right]) - 1);
       let isEmpty = Math.max(...charMap.values());
 
@@ -54,4 +54,4 @@ var checkInclusion = function (s1, s2) {
   return false;
 };
 
-console.log(checkInclusion("ab", "eidboaoo"));
+console.log(checkInclusion('ab', 'eidboaoo'));

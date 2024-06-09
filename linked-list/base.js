@@ -169,10 +169,10 @@ function LinkedList() {
   }
 
   function toString(list = null) {
-    let result = "";
+    let result = '';
     let current = list ? list : head;
     while (current) {
-      result += `${current.value}${current.next ? " -> " : ""}`;
+      result += `${current.value}${current.next ? ' -> ' : ''}`;
       current = current.next;
     }
     return result;

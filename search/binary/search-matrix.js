@@ -11,8 +11,7 @@ var searchMatrix = function (matrix, target) {
 
   //Finding the correct row using binary search, as we know every row is sorted and last value of each row is smaller than the first value of next row
 
-  if (target < matrix[0][0] || target > matrix[rows - 1][cols - 1])
-    return false;
+  if (target < matrix[0][0] || target > matrix[rows - 1][cols - 1]) return false;
 
   let topRow = 0;
   let bottomRow = rows - 1;

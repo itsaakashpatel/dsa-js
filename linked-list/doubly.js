@@ -148,17 +148,17 @@ function DoublyLinkedList() {
   }
 
   function toString() {
-    let result = "";
+    let result = '';
     let current = head;
     while (current) {
-      result += `${current.element}${current.next ? " -> " : ""}`;
+      result += `${current.element}${current.next ? ' -> ' : ''}`;
       current = current.next;
     }
     return result;
   }
 
   function toStringInReverse() {
-    let result = "";
+    let result = '';
     let current = head;
     let last = null;
     while (current.next !== null) {
@@ -167,7 +167,7 @@ function DoublyLinkedList() {
     }
 
     while (last !== null) {
-      result += `${last.element}${last.previous ? " -> " : ""}`;
+      result += `${last.element}${last.previous ? ' -> ' : ''}`;
       last = last.previous;
     }
     return result;

@@ -1,5 +1,5 @@
-import AvlTree from "./avl.js";
-import BinaryTree from "./binary.js";
+import AvlTree from './avl.js';
+import BinaryTree from './binary.js';
 
 let bt = new BinaryTree();
 let avl = new AvlTree();

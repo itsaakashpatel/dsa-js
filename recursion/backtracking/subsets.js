@@ -16,7 +16,7 @@ var subsets = function (nums) {
 
   function recur(index, subset) {
     if (index === nums.length) {
-      console.log("🚀 ~ recur ~ index:", { index, subset });
+      console.log('🚀 ~ recur ~ index:', {index, subset});
       subsets.push(subset);
       return;
     }

@@ -8,20 +8,20 @@ var letterCombinations = function (digits) {
   if (digits.length === 0) return [];
 
   const letterMapping = {
-    1: "",
-    2: "abc",
-    3: "def",
-    4: "ghi",
-    5: "jkl",
-    6: "mno",
-    7: "pqrs",
-    8: "tuv",
-    9: "wxyz",
+    1: '',
+    2: 'abc',
+    3: 'def',
+    4: 'ghi',
+    5: 'jkl',
+    6: 'mno',
+    7: 'pqrs',
+    8: 'tuv',
+    9: 'wxyz',
   };
 
   const output = [];
 
-  combinations("", digits, letterMapping);
+  combinations('', digits, letterMapping);
   return output;
 
   function combinations(pStr, uStr, letterMapping) {
@@ -39,4 +39,4 @@ var letterCombinations = function (digits) {
   }
 };
 
-console.log(letterCombinations(""));
+console.log(letterCombinations(''));

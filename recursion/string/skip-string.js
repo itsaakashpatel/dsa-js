@@ -1,7 +1,7 @@
 //Given a string, skip string aak.
 
 function skipString(str, target) {
-  if (str.length <= 0) return "";
+  if (str.length <= 0) return '';
   return skip(str, 0, target);
 }
 
@@ -11,4 +11,4 @@ function skip(str, index = 0, target) {
   } else return str[index] + skip(str.substring(index + 1), index, target);
 }
 
-console.log(skipString("Aakash", "hh"));
+console.log(skipString('Aakash', 'hh'));

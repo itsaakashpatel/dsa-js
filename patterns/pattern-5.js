@@ -11,7 +11,7 @@
  *      *
  */
 
-let string = "";
+let string = '';
 
 function pattern5(length) {
   let breakPoint = Math.round(length / 2);
@@ -19,15 +19,15 @@ function pattern5(length) {
   for (let row = 1; row <= length; row++) {
     if (row <= breakPoint) {
       for (let col = 1; col <= row; col++) {
-        string += "* ";
+        string += '* ';
       }
     } else {
       for (let col = 1; col <= length - row + 1; col++) {
-        string += "* ";
+        string += '* ';
       }
     }
 
-    string += "\n";
+    string += '\n';
   }
 
   console.log(string);

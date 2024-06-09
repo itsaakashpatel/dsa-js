@@ -18,7 +18,7 @@ function diceSum(target) {
   const numbers = [1, 2, 3, 4, 5, 6];
 
   const output = [];
-  combinations("", target);
+  combinations('', target);
   return output;
 
   function combinations(str, target) {

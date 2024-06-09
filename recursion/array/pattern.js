@@ -11,19 +11,19 @@
  *
  */
 
-let string = "";
+let string = '';
 
 function pattern(row, col) {
   if (row === 0) {
-    return "Empty!";
+    return 'Empty!';
   }
 
   if (row > col) {
-    string = string + " * ";
+    string = string + ' * ';
     pattern(row, col + 1);
   } else {
-    console.log(string + " \n");
-    string = "";
+    console.log(string + ' \n');
+    string = '';
     pattern(row - 1, 0);
   }
 }

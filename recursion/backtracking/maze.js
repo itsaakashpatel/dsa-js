@@ -29,7 +29,7 @@ function count(row, col) {
  */
 
 function path(row, col) {
-  return printPath("", row, col);
+  return printPath('', row, col);
 
   function printPath(str, row, col) {
     if (row === 1 && col === 1) {
@@ -37,13 +37,13 @@ function path(row, col) {
       return;
     }
 
-    if (row > 1) printPath(str + "D", row - 1, col);
-    if (col > 1) printPath(str + "R", row, col - 1);
+    if (row > 1) printPath(str + 'D', row - 1, col);
+    if (col > 1) printPath(str + 'R', row, col - 1);
   }
 }
 
 function pathDiagonal(row, col) {
-  return printPath("", row, col);
+  return printPath('', row, col);
 
   function printPath(str, row, col) {
     if (row === 1 && col === 1) {
@@ -51,11 +51,11 @@ function pathDiagonal(row, col) {
       return;
     }
 
-    if (row > 1) printPath(str + "D", row - 1, col);
+    if (row > 1) printPath(str + 'D', row - 1, col);
 
-    if (col > 1) printPath(str + "R", row, col - 1);
+    if (col > 1) printPath(str + 'R', row, col - 1);
 
-    if (row > 1 && col > 1) printPath(str + "C", row - 1, col - 1);
+    if (row > 1 && col > 1) printPath(str + 'C', row - 1, col - 1);
   }
 }
 

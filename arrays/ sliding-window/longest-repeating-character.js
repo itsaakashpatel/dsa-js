@@ -59,7 +59,7 @@ var characterReplacement = function (str, k) {
   return maxLength;
 };
 
-console.log(characterReplacement("ABBB", 2));
+console.log(characterReplacement('ABBB', 2));
 
 //Notes:
 /**

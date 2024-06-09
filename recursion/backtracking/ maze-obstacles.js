@@ -10,7 +10,7 @@ function mazeObstacle(row, col, obstacle = []) {
   }
 
   if (obstacle.length > 0 && row === obstacle[0] && col === obstacle[1]) {
-    console.log("🚀 ~ mazeObstacle ~ obstacle:", obstacle);
+    console.log('🚀 ~ mazeObstacle ~ obstacle:', obstacle);
     return 0;
   }
 
@@ -21,7 +21,7 @@ function mazeObstacle(row, col, obstacle = []) {
 }
 
 function pathWithRestrictions(row, col, obstacle = []) {
-  return printPath("", row, col, obstacle);
+  return printPath('', row, col, obstacle);
 
   function printPath(str, row, col, obstacle) {
     if (row === 1 && col === 1) {
@@ -30,11 +30,11 @@ function pathWithRestrictions(row, col, obstacle = []) {
     }
 
     if (obstacle.length > 0 && row === obstacle[0] && col === obstacle[1]) {
-      return "";
+      return '';
     }
 
-    if (row > 1) printPath(str + "D", row - 1, col, obstacle);
-    if (col > 1) printPath(str + "R", row, col - 1, obstacle);
+    if (row > 1) printPath(str + 'D', row - 1, col, obstacle);
+    if (col > 1) printPath(str + 'R', row, col - 1, obstacle);
   }
 }
 

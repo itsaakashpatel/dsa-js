@@ -1,15 +1,15 @@
 //Given a string, skip character a.
 
 function skipCharacter(str, target) {
-  if (str === "") return "";
+  if (str === '') return '';
 
-  const arrayStr = str.split("");
+  const arrayStr = str.split('');
 
   return skip(arrayStr, 0, target);
 }
 
 function skip(array, index, target) {
-  if (index >= array.length) return "";
+  if (index >= array.length) return '';
 
   const element = array[index];
   if (element !== target) {
@@ -17,4 +17,4 @@ function skip(array, index, target) {
   } else return skip(array, index + 1, target);
 }
 
-console.log(skipCharacter("Aakash", "A"));
+console.log(skipCharacter('Aakash', 'A'));

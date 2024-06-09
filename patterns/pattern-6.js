@@ -10,7 +10,7 @@
  *      *
  */
 
-let string = "";
+let string = '';
 
 function pattern6(length) {
   let breakPoint = Math.round(length / 2);
@@ -20,14 +20,14 @@ function pattern6(length) {
     const noOfCols = row <= breakPoint ? row : length - row + 1;
 
     for (let space = 1; space <= noOfSpaces; space++) {
-      string += " ";
+      string += ' ';
     }
 
     for (let col = 1; col <= noOfCols; col++) {
-      string += "* ";
+      string += '* ';
     }
 
-    string += "\n";
+    string += '\n';
   }
 
   console.log(string);

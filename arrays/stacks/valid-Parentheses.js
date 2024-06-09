@@ -21,15 +21,15 @@ var isValid = function (s) {
 
   for (let i = 0; i < s.length; i++) {
     //If we find an opening bracket, push to stack.
-    if (s[i] === "(" || s[i] === "{" || s[i] === "[") {
+    if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
       stack.push(s[i]);
     } else {
       let last = stack[stack.length - 1];
-      
+
       if (
-        (s[i] === ")" && last === "(") ||
-        (s[i] === "}" && last === "{") ||
-        (s[i] === "]" && last === "[")
+        (s[i] === ')' && last === '(') ||
+        (s[i] === '}' && last === '{') ||
+        (s[i] === ']' && last === '[')
       ) {
         stack.pop();
       } else {
@@ -45,4 +45,4 @@ var isValid = function (s) {
   return true;
 };
 
-console.log(isValid("()"));
+console.log(isValid('()'));

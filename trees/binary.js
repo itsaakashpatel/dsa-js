@@ -69,7 +69,7 @@ const BinaryTree = function () {
     }
 
     if (node.value === value) {
-      console.log("Node found at ", node);
+      console.log('Node found at ', node);
       return node;
     }
 
@@ -89,7 +89,7 @@ const BinaryTree = function () {
         node = node.left;
       }
 
-      console.log("Minimum", node.value);
+      console.log('Minimum', node.value);
       return node.value;
     }
     return null;
@@ -103,7 +103,7 @@ const BinaryTree = function () {
         node = node.right;
       }
 
-      console.log("Maximum", node.value);
+      console.log('Maximum', node.value);
       return node.value;
     }
     return null;

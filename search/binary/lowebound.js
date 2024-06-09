@@ -26,4 +26,4 @@ let arr = [1, 2, 2, 3];
 let array = [3, 5, 8, 15, 19];
 
 let answer = lowerBound(array, 4);
-console.log("Index at", answer);
+console.log('Index at', answer);
